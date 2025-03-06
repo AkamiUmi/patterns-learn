@@ -1,7 +1,5 @@
 package composite;
 
-import uz.akamiumi.Expression;
-
 public class Constant implements Expression {
   private double value;
   public Constant(double value) {

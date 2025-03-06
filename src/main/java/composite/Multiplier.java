@@ -1,8 +1,5 @@
 package composite;
 
-import uz.akamiumi.BinaryExpression;
-import uz.akamiumi.Expression;
-
 public class Multiplier extends BinaryExpression {
   public Multiplier(Expression left, Expression right) {
     super(left, right);

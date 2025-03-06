@@ -1,8 +1,5 @@
 package composite;
 
-import uz.akamiumi.BinaryExpression;
-import uz.akamiumi.Expression;
-
 public class Adder extends BinaryExpression {
 
   public Adder(Expression left, Expression right) {

@@ -1,7 +1,6 @@
 package composite;
 
 import org.junit.jupiter.api.Test;
-import uz.akamiumi.Expression;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

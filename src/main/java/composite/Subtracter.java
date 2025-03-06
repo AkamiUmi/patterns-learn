@@ -1,8 +1,5 @@
 package composite;
 
-import uz.akamiumi.BinaryExpression;
-import uz.akamiumi.Expression;
-
 public class Subtracter extends BinaryExpression {
 
   public Subtracter(Expression left, Expression right) {
