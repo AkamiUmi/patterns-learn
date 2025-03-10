@@ -2,11 +2,14 @@ package factory.vehicle;
 
 public class Main {
     public static void main(String[] args) {
-        Client client = new Client(1);
-        Vehicle pVehicle = client.getVehicle();
-        if (pVehicle != null) {
-            pVehicle.printVehicle();
-        }
-        client.cleanup();
+        VehicleFactory twoWheelerFactory = new TwoWheelerFactory();
+        Client twoWheelerClient = new Client(twoWheelerFactory);
+        Vehicle twoWheeler = twoWheelerClient.getVehicle();
+        twoWheeler.printVehicle();
+
+        VehicleFactory fourWheelerFactory = new FourWheelerFactory();
+        Client fourWheelerClient = new Client(fourWheelerFactory);
+        Vehicle fourWheeler = fourWheelerClient.getVehicle();
+        fourWheeler.printVehicle();
     }
 }
