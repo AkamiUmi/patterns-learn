@@ -19,6 +19,13 @@ public class MoveCommand implements Command {
       child.drag();
     }
   }
+
+  public void move(int x, int y) {
+    for (Shape child :editor.getShapes().getSelected()) {
+      child.moveTo(x - startX, y - startY);
+    }
+  }
+
   public void stop(int x, int y) {
     endX = x;
     endY = y;
