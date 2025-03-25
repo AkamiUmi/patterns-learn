@@ -19,6 +19,14 @@ public class MoveCommand implements Command {
       child.drag();
     }
   }
+  public void stop(int x, int y) {
+    endX = x;
+    endY = y;
+    for (Shape child : editor.getShapes().getSelected()) {
+      child.drop();
+    }
+  }
+
   @Override
   public String getName() {
     return "Move by X:" + (endX - startX) + " Y:" + (endY - startY);
@@ -27,6 +35,8 @@ public class MoveCommand implements Command {
 
   @Override
   public void execute() {
-
+    for (Shape child :editor.getShapes().getSelected()) {
+      child.moveBy(endX - startX, endY - startY);
+    }
   }
 }
